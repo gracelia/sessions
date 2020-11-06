@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>State</title>
+
+		<link rel="stylesheet" href="./dist/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/moon.css" id="theme">
+    <link rel="stylesheet" href="./plugin/highlight/monokai.css">
+    <style>
+      .fragment.current-visible.visible:not(.current-fragment) {
+    animation: removed-item-animation 1s cubic-bezier(0.6, -0.05, 0.9, 0.9) forwards;
+}
+@keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        line-height: 0px;
+        font-size: 0px;
+        height: 0px;
+        display: none;
+    }
+}
+.highlight-red {
+  color: red;
+}
+    </style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+        <section data-markdown="State-I.md" data-separator="^\n\n\n\n" data-separator-vertical="^\n\n"></section>
+      </div>
+		</div>
+
+		<script src="./dist/reveal.js"></script>
+      <script src="./plugin/markdown/markdown.js"></script>
+      <script src="./plugin/highlight/highlight.js"></script>
+      <script src="./plugin/notes/notes.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
